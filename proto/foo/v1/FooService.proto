@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package foo.v1;
+
+import "google/protobuf/empty.proto";
+
+service FooService {
+  rpc GetFoo(google.protobuf.Empty) returns (GetFooResponse);
+
+  rpc SetBar(SetBarRequest) returns (google.protobuf.Empty);
+
+}
+
+message GetFooResponse {
+  string message = 1;
+}
+
+message SetBarRequest {
+  string message = 1;
+}

@@ -1,0 +1,12 @@
+version: v1
+managed:
+  enabled: true
+  java_multiple_files: true
+  java_package_prefix: io.wesl.prototest.api
+plugins:
+  - plugin: pbandk
+    out: app/src/main/kotlin
+  - plugin: buf.build/bufbuild/connect-kotlin
+    out: app/src/main/kotlin
+
+
